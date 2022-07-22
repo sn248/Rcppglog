@@ -10,19 +10,19 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
-// rcpp_hello_world
-List rcpp_hello_world();
-RcppExport SEXP _Rcppglog_rcpp_hello_world() {
+// rcpp_glog_test
+int rcpp_glog_test();
+RcppExport SEXP _Rcppglog_rcpp_glog_test() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(rcpp_hello_world());
+    rcpp_result_gen = Rcpp::wrap(rcpp_glog_test());
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_Rcppglog_rcpp_hello_world", (DL_FUNC) &_Rcppglog_rcpp_hello_world, 0},
+    {"_Rcppglog_rcpp_glog_test", (DL_FUNC) &_Rcppglog_rcpp_glog_test, 0},
     {NULL, NULL, 0}
 };
 
